@@ -48,16 +48,19 @@ nsd system clone git@github.com:nearform/nfddemo.git
 ### Build web container
 
 ```sh
-nsd container build nfdemo web
+nsd container build nfddemo web
 ```
 
-### Deploy nfdemo
+### Deploy nfd demo
+
+Replace \<revision_id\> with the latest revision shown by the revision list command.
 
 ```sh
-nsd system deploy nfdemo
+nsd revision list nfddemo
+nsd revision deploy nfddemo <revision_id>
 ```
 
-### Open nfdemo in the browser
+### Open nfd demo in the browser
 
 ```sh
 open http://$(boot2docker ip):8000
