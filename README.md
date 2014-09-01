@@ -31,6 +31,14 @@ Depends on [boot2docker](https://github.com/boot2docker/boot2docker)
 boot2docker up
 ```
 
+### Login
+
+By default, login uses the email defined in ~/.gitconfig and that is all that is required.
+
+```sh
+nsd login
+```
+
 ### Clone nfd demo
 
 ```sh
@@ -51,7 +59,9 @@ nsd system deploy nfdemo
 
 ### Open nfdemo in the browser
 
-[http://localhost:8000](http://localhost:8000)
+```sh
+open http://$(boot2docker ip):8000
+```
 
 ## License
 
